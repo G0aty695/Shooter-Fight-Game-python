@@ -57,7 +57,7 @@ for x in range(TILE_TYPES):
 #images
 bullet_img = pygame.image.load('img/icons/bullet.png').convert_alpha()
 
-#granade
+#grenade
 grenade_img = pygame.image.load('img/icons/grenade.png').convert_alpha()
 
 #item boxes
@@ -244,12 +244,12 @@ class soldier(pygame.sprite.Sprite):
         if self.rect.bottom > SCREEN_HEIGHT:
             self.health = 0
 
-        #check if going off  the edges of the screen:
+        #check if going off the edges of the screen:
         if self.char_type == 'player':
             if self.rect.left + dx < 0 or self.rect.right + dx > SCREEN_WIDTH:
                 dx = 0
 
-        #update rectangle  positions
+        #update rectangle positions
         self.rect.x += dx
         self.rect.y += dy
 
